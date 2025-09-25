@@ -103,8 +103,9 @@ fun GestureHandler(
         var originalSpeed = MPVLib.getPropertyFloat("speed") ?: 1f
         detectTapGestures(
           onTap = {
-            if (controlsShown) viewModel.hideControls() else viewModel.showControls()
-          },
+    viewModel.togglePlayPause()
+    if (controlsShown) viewModel.hideControls() else viewModel.showControls()
+},
           onDoubleTap = {
             if (areControlsLocked || isDoubleTapSeeking) return@detectTapGestures
             if (it.x > size.width * 3 / 5) {
