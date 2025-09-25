@@ -185,7 +185,7 @@ fun GestureHandler(
             startingPosition,
             startingX,
             change.position.x,
-            0.15f
+            0.0375f
           ).let {
             viewModel.gestureSeekAmount.update { _ ->
               Pair(
