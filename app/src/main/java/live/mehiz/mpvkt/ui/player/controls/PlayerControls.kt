@@ -187,8 +187,8 @@ fun PlayerControls(
               Pair(.7f, Color.Transparent),
               Pair(1f, Color.Black),
             ),
-            alpha = transparentOverlay,
-          )
+            alpha = 0f, // fully transparent
+)
           .padding(horizontal = MaterialTheme.spacing.medium),
       ) {
         val (topLeftControls, topRightControls) = createRefs()
